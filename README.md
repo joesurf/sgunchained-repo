@@ -25,10 +25,7 @@
     <br />
     <br />
     <a href="">View Demo</a>
-
-    <!-- ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a> -->
-
+ 
   </p>
 </div>
 
@@ -54,7 +51,9 @@
 [![Product Name Screen Shot][product-screenshot]](https://the100club.netlify.app/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-<p>Unchained is a website that provides a collection of activities for people to do in Singapore.</p>
+<p>Unchained is a website that provides a collection of activities for people to do in Singapore</p>
+
+
 
 ### Built With
 
