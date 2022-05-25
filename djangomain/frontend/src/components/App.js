@@ -1,19 +1,23 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-  }
+import SearchParams from "./SearchParams";
 
-  render() {
-    return (
-      <div>
-        <h1>Unchained</h1>
-      </div>
-    );
-  }
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <header>
+        <Link to="/">Unchained</Link>
+      </header>
+      <Routes>
+        <Route path="/" element={<SearchParams />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 const appDiv = document.getElementById("app");
 render(<App />, appDiv);
+
