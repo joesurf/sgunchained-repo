@@ -12,23 +12,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://the100club.netlify.app/">
-    <img src="./src/assets/TempLogo.png" alt="Logo" width="200" height="auto">
+  <a href="">
+    <img src="./frontend/public/chains.png" alt="Logo" width="200" height="auto">
   </a>
 
-<h3 align="center">The 100 Club</h3>
+<h3 align="center">Unchained</h3>
 
   <p align="center">
-    An exclusive membership platform + community for entrepreneurs
+    A website for recommending activities in Singapore
     <br />
-    <a href="https://sosimplysean.github.io/the100club/"><strong>Explore our documentation »</strong></a>
+    <a href="https://github.com/joesurf/sgunchained-repo"><strong>Explore our documentation »</strong></a>
     <br />
     <br />
-    <a href="https://the100club.netlify.app/">View Demo</a>
-    ·
-    <a href="https://4x6toyulyzs.typeform.com/to/Ad0SWlc0">Sign up for waitlist</a>
+    <a href="">View Demo</a>
+
     <!-- ·
     <a href="https://github.com/github_username/repo_name/issues">Request Feature</a> -->
+
   </p>
 </div>
 
@@ -54,9 +54,7 @@
 [![Product Name Screen Shot][product-screenshot]](https://the100club.netlify.app/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-<p>The 100 Club, is a mastermind membership platform + community, that matches entrepreneurial individuals into groups of 4, in order for them to support each other in staying accountable, sharing advice, and networking to grow their business.</p>
-
-<p>It is an idea that we are going to expand in the future and we have already found traction with over 20+ student founders keen on joining us. </p>
+<p>Unchained is a website that provides a collection of activities for people to do in Singapore.</p>
 
 ### Built With
 
