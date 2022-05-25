@@ -48,10 +48,9 @@
 
 ## About The Project
 
+<p>Unchained is a website that provides a collection of activities for people to do in Singapore. We hope to provide experiences that serve to inspire users in some way.</p>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
-<p>Unchained is a website that provides a collection of activities for people to do in Singapore</p>
-
-
 
 ### Built With
 
