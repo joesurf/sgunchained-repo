@@ -56,6 +56,9 @@
 
 - [React.js](https://reactjs.org/)
 - [Bootstrap](https://getbootstrap.com)
+- [Django](https://www.djangoproject.com)
+- [DjangoRestFramework](https://www.django-rest-framework.org)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -66,7 +69,7 @@
 <a href=""><strong>Check out the website »</strong></a>
 
 - [x] Home Page
-- [x] Product Page
+- [x] Activities Page
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
