@@ -48,8 +48,6 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://the100club.netlify.app/)
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 <p>Unchained is a website that provides a collection of activities for people to do in Singapore</p>
 
