@@ -4,19 +4,27 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { activityListReducer, activityDetailsReducer } from './reducers/activityReducers';
 import { experienceReducer } from './reducers/experienceReducers';
+import { userLoginReducer, userRegisterReducer } from './reducers/userReducers';
 
 const reducer = combineReducers({
   activityList: activityListReducer,
   activityDetails: activityDetailsReducer,
   experience: experienceReducer,
+  userLogin: userLoginReducer,
+  userRegister: userRegisterReducer,
 })
 
 const experienceItemsFromStorage = localStorage.getItem('experienceItems')
   ? JSON.parse(localStorage.getItem('experienceItems'))
   : []
 
+const userInfoFromStorage = localStorage.getItem('userInfo')
+  ? JSON.parse(localStorage.getItem('userInfo'))
+  : null
+
 const initialState = {
-  experience: { experienceItems: experienceItemsFromStorage }
+  experience: { experienceItems: experienceItemsFromStorage },
+  userLogin: { userInfo: userInfoFromStorage }
 }
 
 const middleware = [thunk]
