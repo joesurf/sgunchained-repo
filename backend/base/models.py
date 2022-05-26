@@ -25,6 +25,7 @@ class Activity(models.Model):
     colour = models.CharField(max_length=200, null=True, blank=True)
     rating = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
     numReviews = models.IntegerField(null=True, blank=True, default=0)
+    numPeople = models.IntegerField(null=True, blank=True, default=0)
 
     def __str__(self):
         return f"{self.name}-{self.genre}-{self.purpose}"

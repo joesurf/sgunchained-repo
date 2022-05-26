@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 
 import HomeScreen from './screens/HomeScreen';
 import ActivityScreen from './screens/ActivityScreen';
+import ExperienceScreen from './screens/ExperienceScreen';
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
           <Routes>
             <Route path='/' element={<HomeScreen />} exact />
             <Route path='/activity/:id' element={<ActivityScreen />} />
+            <Route path='/experience' element={<ExperienceScreen />} >
+              <Route path=':id' element={<ExperienceScreen />} />
+            </Route>
           </Routes>
         </Container>
       </main>

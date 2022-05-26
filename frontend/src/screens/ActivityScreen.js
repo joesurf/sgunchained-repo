@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
-import { Row, Col, Image, ListGroup, Button, Card } from 'react-bootstrap';
+import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Row, Col, Image, ListGroup, Button, Card, Form } from 'react-bootstrap';
 
 import { listActivityDetails } from '../actions/activityActions';
 import Rating from '../components/Rating';
@@ -11,6 +11,9 @@ import Message from '../components/Message';
 
 function ActivityScreen() {
   const match = useParams()
+  const navigate = useNavigate()
+
+  const [quantity, setQuantity] = useState(1)
 
   const dispatch = useDispatch()
   const activityDetails = useSelector(state => state.activityDetails)
@@ -20,7 +23,11 @@ function ActivityScreen() {
     
     dispatch(listActivityDetails(match.id))
     
-  }, [dispatch, match.id])
+  }, [dispatch, match])
+
+  const addToExperienceHandler = () => {
+    navigate(`/experience/${match.id}?quantity=${quantity}`)
+  }
 
   return (
     <div>
@@ -75,7 +82,33 @@ function ActivityScreen() {
                       </ListGroup.Item>
 
                       <ListGroup.Item>
-                        <Button className='btn-block' type='button'>Add to Experience</Button>
+                        <Row>
+                          <Col>People:</Col>
+                          <Col xs='auto' className='my-1'>
+                            <Form.Control 
+                              as="select" 
+                              value={quantity} 
+                              onChange={(e) => setQuantity(Number(e.target.value))}
+                            >
+                              {
+                                [...Array(activity.numPeople).keys()].map((x) => (
+                                  <option key={x + 1} value={x + 1}>
+                                    {x + 1}
+                                  </option>
+                                ))
+                              }
+
+                            </Form.Control>
+                          </Col>
+                        </Row>
+                      </ListGroup.Item>
+
+                      <ListGroup.Item>
+                        <Button 
+                          onClick={addToExperienceHandler}
+                          className='btn-block' 
+                          type='button'
+                        >Add to Experience</Button>
                       </ListGroup.Item>
                     </ListGroup>
                   </Card>
