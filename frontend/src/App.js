@@ -9,6 +9,7 @@ import ActivityScreen from './screens/ActivityScreen';
 import ExperienceScreen from './screens/ExperienceScreen';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path='/' element={<HomeScreen />} exact />
             <Route path='/register' element={<RegisterScreen />} />
             <Route path='/login' element={<LoginScreen />} />
+            <Route path='/profile' element={<ProfileScreen />} />
             <Route path='/activity/:id' element={<ActivityScreen />} />
             <Route path='/experience' element={<ExperienceScreen />} >
               <Route path=':id' element={<ExperienceScreen />} />

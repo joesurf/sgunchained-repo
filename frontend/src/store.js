@@ -4,7 +4,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { activityListReducer, activityDetailsReducer } from './reducers/activityReducers';
 import { experienceReducer } from './reducers/experienceReducers';
-import { userLoginReducer, userRegisterReducer } from './reducers/userReducers';
+import { userLoginReducer, userRegisterReducer, userDetailsReducer, userUpdateProfileReducer } from './reducers/userReducers';
 
 const reducer = combineReducers({
   activityList: activityListReducer,
@@ -12,6 +12,8 @@ const reducer = combineReducers({
   experience: experienceReducer,
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
+  userDetails: userDetailsReducer,
+  userUpdateProfile: userUpdateProfileReducer,
 })
 
 const experienceItemsFromStorage = localStorage.getItem('experienceItems')
