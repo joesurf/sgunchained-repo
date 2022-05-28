@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'corsheaders',
+    'storages',
 
     'base.apps.BaseConfig',
 ]
@@ -104,7 +106,9 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'frontend/build')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,6 +128,14 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'unchained', 
+    #     'USER': 'postgres',
+    #     'PASSWORD': '',
+    #     'HOST': 'localhost',
+    #     'PORT': '5432',
+    # } 
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
@@ -172,7 +184,8 @@ MEDIA_URL = '/images/'
 
 # Where all static files are stored
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    BASE_DIR / 'static',
+    BASE_DIR / 'frontend/build/static',
 ]
 
 # For user-uploaded content (where it gets uploaded)
@@ -184,3 +197,12 @@ MEDIA_ROOT = 'static/images'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+# For storing files on AWS S3
+
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# AWS_ACCESS_KEY_ID = ""
+# AWS_SECRET_ACCESS_KEY = ""
+# AWS_STORAGE_BUCKET_NAME = "unchained-bucket"
+# AWS_QUERYSTRING_AUTH = False

@@ -7,6 +7,9 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 import { listActivities } from '../actions/activityActions';
 
+import './style.css';
+
+
 function HomeScreen() {
   const dispatch = useDispatch()
   const activityList = useSelector(state => state.activityList)
