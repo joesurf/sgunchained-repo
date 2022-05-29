@@ -36,6 +36,11 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#level-of-achievement">Level of Achievement</a></li>
+        <li><a href="#project-scope">Project Scope</a></li>
+        <li><a href="#problem-motivation">Problem Motivation</a></li>
+        <li><a href="#user-stories">User Stories</a></li>
+        <li><a href="#concept-design">Concept Design</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -50,7 +55,7 @@
 
 ### Level of Achievement
 
-<p>Project Apollo</p>
+<p>Apollo</p>
 
 ### Project Scope
 
@@ -60,7 +65,7 @@
 
 <p>Users can choose to sign in to save their experiences as well as improve our recommendation by providing personal information and past selections. All users will first be directed to a landing page which seeks to understand their current mood or interest. After that, they will recommended a few activities based on their responses, of which they can filter based on various constraints like cost, location and availability. The website will also provide details for how to conduct the activities suggested.</p>
 
-<p>After the experience, users can write personal notes about the experience which will be saved. They can also rate and comment on each particular activity or share their experience bucket with others. Activities which are not completed can be saved ot a wishlist. </P>
+<p>After the experience, users can write personal notes about the experience which will be saved. They can also rate and comment on each particular activity or share their experience bucket with others. Activities which are not completed can be saved to a wishlist. </P>
 
 ### Problem Motivation
 
@@ -92,7 +97,7 @@ alternatives are friends, Google or social media. </p>
 #### Entity Relationship Diagram
 
 <span>
-  <img src="./resources/ERD.png" alt="Logo" width="200" height="auto">
+  <img src="./resources/ERD.png" alt="Logo" width="600" height="auto">
 </span>
 
 <p>Users can create experiences using buckets which is a set of activities they can do. Each bucket can be filled with various activities which are filtered by cost, location and pax. In addition, users can write notes for each experiences. </p>
@@ -115,7 +120,7 @@ alternatives are friends, Google or social media. </p>
 
 ## Roadmap
 
-<a href=""><strong>Check out the website (WIP) »</strong></a>
+<a href=""><strong>Check out the website (NA) »</strong></a>
 
 - [x] User Login and Registration
 - [x] Activities Page
