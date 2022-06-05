@@ -31,8 +31,8 @@ function Header() {
           <Navbar.Collapse id="basic-navbar-nav">
 
             <Nav className="mr-auto">
-              <LinkContainer to='/experience'>
-                <Nav.Link><i className="fas fa-list-alt"></i> Experience</Nav.Link>
+              <LinkContainer to='/bucket'>
+                <Nav.Link><i className="fas fa-list-alt"></i> Bucket</Nav.Link>
               </LinkContainer>
 
               {userInfo ? (

@@ -127,7 +127,7 @@ function ProfileScreen() {
       </Col>
 
       <Col md={9}>
-        <h2>My Experiences</h2>
+        <h2>My Bucket</h2>
       </Col>
     </Row>
   )

@@ -25,8 +25,8 @@ function ActivityScreen() {
     
   }, [dispatch, match])
 
-  const addToExperienceHandler = () => {
-    navigate(`/experience/${match.id}?quantity=${quantity}`)
+  const addToBucketHandler = () => {
+    navigate(`/bucket/${match.id}?quantity=${quantity}`)
   }
 
   return (
@@ -105,10 +105,10 @@ function ActivityScreen() {
 
                       <ListGroup.Item>
                         <Button 
-                          onClick={addToExperienceHandler}
+                          onClick={addToBucketHandler}
                           className='btn-block' 
                           type='button'
-                        >Add to Experience</Button>
+                        >Add to Bucket</Button>
                       </ListGroup.Item>
                     </ListGroup>
                   </Card>

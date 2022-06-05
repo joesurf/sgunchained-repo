@@ -3,21 +3,21 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { activityListReducer, activityDetailsReducer } from './reducers/activityReducers';
-import { experienceReducer } from './reducers/experienceReducers';
+import { bucketReducer } from './reducers/bucketReducers';
 import { userLoginReducer, userRegisterReducer, userDetailsReducer, userUpdateProfileReducer } from './reducers/userReducers';
 
 const reducer = combineReducers({
   activityList: activityListReducer,
   activityDetails: activityDetailsReducer,
-  experience: experienceReducer,
+  bucket: bucketReducer,
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
   userDetails: userDetailsReducer,
   userUpdateProfile: userUpdateProfileReducer,
 })
 
-const experienceItemsFromStorage = localStorage.getItem('experienceItems')
-  ? JSON.parse(localStorage.getItem('experienceItems'))
+const bucketItemsFromStorage = localStorage.getItem('bucketItems')
+  ? JSON.parse(localStorage.getItem('bucketItems'))
   : []
 
 const userInfoFromStorage = localStorage.getItem('userInfo')
@@ -25,7 +25,7 @@ const userInfoFromStorage = localStorage.getItem('userInfo')
   : null
 
 const initialState = {
-  experience: { experienceItems: experienceItemsFromStorage },
+  bucket: { bucketItems: bucketItemsFromStorage },
   userLogin: { userInfo: userInfoFromStorage }
 }
 
