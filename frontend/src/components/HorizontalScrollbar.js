@@ -45,7 +45,7 @@ function HorizontalScrollbar({items}) {
 
   return (
     <div>
-      <div className="example" style={{ paddingTop: "100px", height: "150vh" }}>
+      <div className="example" style={{ paddingTop: "50px", height: "30vh" }}>
         <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
           <ScrollMenu
             // or on top

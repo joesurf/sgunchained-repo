@@ -19,3 +19,20 @@ h3 {
 .rating span{
   margin: 0.1rem;
 }
+
+.title {
+  color: #FFBD2B;
+  font-family: 'typewriter 84', monospace;
+}
+
+.normaltext {
+  color: #FFBD2B;
+  font-family: 'typewriter 84', monospace;
+  margin: 20px 0px;
+}
+
+.buttontext {
+  color: black;
+  font-family: 'jetbrains mono', monospace;
+}
+

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
+import LandingScreen from './screens/LandingScreen';
 import HomeScreen from './screens/HomeScreen';
 import ActivityScreen from './screens/ActivityScreen';
 import BucketScreen from './screens/BucketScreen';
@@ -20,7 +21,8 @@ function App() {
       <main className="py-3">
         <Container>
           <Routes>
-            <Route path='/' element={<HomeScreen />} exact />
+            <Route path='/' element={<LandingScreen />} exact />
+            <Route path='/home' element={<HomeScreen />} />
             <Route path='/register' element={<RegisterScreen />} />
             <Route path='/login' element={<LoginScreen />} />
             <Route path='/profile' element={<ProfileScreen />} />

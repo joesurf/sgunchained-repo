@@ -21,7 +21,7 @@ function HomeScreen() {
 
   return (
     <div>
-      <h1>Latest Activities</h1>
+      <h1 className="font">Seize the day</h1>
       {loading ? <Loader />
         : error ? <Message variant='danger'>{error}</Message>  
           :
@@ -35,7 +35,7 @@ function HomeScreen() {
           //   ))}
           // </Row>
       }
-
+      <h5 className="font">Here's to an unforgettable experience...</h5>
     </div>
   )
 }
