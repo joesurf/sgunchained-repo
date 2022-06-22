@@ -2,7 +2,7 @@ import axios from 'axios';
 import { BUCKET_ADD_ITEM, BUCKET_REMOVE_ITEM } from '../constants/bucketConstants';
 
 export const addToBucket = (id, quantity) => async (dispatch, getState) => {
-  const { data } = await axios.get(`/api/activities/${id}`)
+  const { data } = await axios.get(`/api/activities/id/${id}`)
 
   dispatch({
     type: BUCKET_ADD_ITEM,

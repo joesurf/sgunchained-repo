@@ -22,11 +22,13 @@ function App() {
         <Container>
           <Routes>
             <Route path='/' element={<LandingScreen />} exact />
-            <Route path='/home' element={<HomeScreen />} />
+            <Route path='/home' element={<HomeScreen />} >
+              <Route path=':tag' element={<HomeScreen />} />
+            </Route>
             <Route path='/register' element={<RegisterScreen />} />
             <Route path='/login' element={<LoginScreen />} />
-            <Route path='/profile' element={<ProfileScreen />} />
             <Route path='/experience' element={<ExperienceScreen />} />
+            <Route path='/profile' element={<ProfileScreen />} />
             <Route path='/activity/:id' element={<ActivityScreen />} />
             <Route path='/bucket' element={<BucketScreen />} >
               <Route path=':id' element={<BucketScreen />} />

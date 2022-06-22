@@ -9,16 +9,19 @@ import {
   ACTIVITY_DETAILS_FAIL,
  } from '../constants/activityConstants';
 
- export const listActivities = () => async (dispatch) => {
+ export const listActivities = (tag) => async (dispatch) => {
   try {
     dispatch({ type: ACTIVITY_LIST_REQUEST })
 
-    const { data } = await axios.get('/api/activities/')
+    const { data } = await axios.get(`/api/activities/${tag}`)
 
-    dispatch({
-      type: ACTIVITY_LIST_SUCCESS,
-      payload: data
-    })
+    setTimeout(function() {
+      dispatch({
+        type: ACTIVITY_LIST_SUCCESS,
+        payload: data
+      })    
+    }, 1000);
+
 
   } catch (error) {
     dispatch({
@@ -35,7 +38,7 @@ import {
   try {
     dispatch({ type: ACTIVITY_DETAILS_REQUEST })
 
-    const { data } = await axios.get(`/api/activities/${id}`)
+    const { data } = await axios.get(`/api/activities/id/${id}`)
 
     dispatch({
       type: ACTIVITY_DETAILS_SUCCESS,

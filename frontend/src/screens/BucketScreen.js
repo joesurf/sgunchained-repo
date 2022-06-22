@@ -29,7 +29,7 @@ function BucketScreen() {
   }
 
   const checkoutHandler = () => {
-    navigate('/login?redirect=experience')
+    navigate('/experience')
   }
 
   return (
@@ -50,7 +50,7 @@ function BucketScreen() {
                   </Col>
 
                   <Col md={3}>
-                    <Link to={`/product/${item.activity}`}>{item.name}</Link>
+                    <Link to={`/activity/${item.activity}`}>{item.name}</Link>
                   </Col>
 
                   <Col md={2}>

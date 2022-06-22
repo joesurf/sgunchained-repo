@@ -5,15 +5,15 @@ import { Row, Col, Image, ListGroup, Button, Card, Form } from 'react-bootstrap'
 const tags = [
   {
     '_id': '1',
-    'value': "young, dumb and broke"
+    'value': "popular"
   },
   {
     '_id': '2',
-    'value': "wtf is this place"
+    'value': "cheap"
   },
   {
     '_id': '3',
-    'value': "overhyped but still good"
+    'value': "unconventional"
   }
 ]
 
@@ -23,7 +23,8 @@ function LandingScreen() {
   const navigate = useNavigate()
 
   const tagSelector = () => {
-    navigate('/home')
+
+    // Maybe dispatch the tag name
   }
 
   return (
@@ -33,13 +34,15 @@ function LandingScreen() {
       <Row>
         {tags.map(tag => (
           <Col key={tag._id} >
-            <Button
-              variant="warning"
-              onClick={tagSelector}
-              className='btn btn-outline' 
-              type='button' >
-              <h5 className='buttontext'>{tag.value}</h5>
-            </Button>
+            <Link to={`/home/${tag.value}`}>
+              <Button
+                variant="warning"
+                //onClick={tagSelector}
+                className='btn btn-outline' 
+                type='button' >
+                <h5 className='buttontext'>{tag.value}</h5>
+              </Button>
+            </Link>
           </Col>
         ))}
       </Row>
