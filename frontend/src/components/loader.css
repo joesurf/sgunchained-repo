@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Anton");
+
+.loader-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 30vh;
+  min-height: 200px;
+}
+
+.loader__text {
+  margin: 5px auto;
+  color: #3d314a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: Anton, sans-serif;
+}
+.loader__filmstrip {
+  position: relative;
+  width: 56px;
+  height: 70px;
+  background: #3d314a;
+  z-index: -1;
+}
+.loader__filmstrip:before, .loader__filmstrip:after {
+  content: "";
+  position: absolute;
+  height: 120%;
+  border-left: 5px dashed #f5f1ed;
+  -webkit-animation: roll 20ms infinite;
+          animation: roll 20ms infinite;
+}
+.loader__filmstrip:before {
+  left: 5px;
+}
+.loader__filmstrip:after {
+  right: 5px;
+}
+
+@-webkit-keyframes roll {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -15px;
+  }
+}
+
+@keyframes roll {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -15px;
+  }
+}
