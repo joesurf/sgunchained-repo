@@ -6,6 +6,7 @@ import Activity from '../components/Activity';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import { listActivities } from '../actions/activityActions';
+import HorizontalScrollbar from '../components/HorizontalScrollbar';
 
 function HomeScreen() {
   const dispatch = useDispatch()
@@ -24,15 +25,17 @@ function HomeScreen() {
       {loading ? <Loader />
         : error ? <Message variant='danger'>{error}</Message>  
           :
-          <Row>
-            {activities.map(activity => (
-              <Col key={activity._id} sm={12} md={6} lg={4} xl={3}>
-                <Activity activity={activity} />
-              </Col>
-            ))}
-          </Row>
+          <HorizontalScrollbar items={activities} />
+
+          // <Row>
+          //   {activities.map(activity => (
+          //     <Col key={activity._id} sm={12} md={6} lg={4} xl={3}>
+          //       <Activity activity={activity} />
+          //     </Col>
+          //   ))}
+          // </Row>
       }
-      
+
     </div>
   )
 }

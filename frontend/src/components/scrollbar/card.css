@@ -1,0 +1,17 @@
+.frame {
+  border: 1px solid #000;
+}
+
+.frame1 {
+  border: 0px solid #f00;
+  position: relative;
+  z-index: 1;
+}
+
+.frame2 {
+  border: 0px solid #0f0;
+  position: absolute;
+  z-index: 2;
+  top: 33px;
+  left: 9px;
+}

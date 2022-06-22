@@ -24,13 +24,16 @@ const userInfoFromStorage = localStorage.getItem('userInfo')
   ? JSON.parse(localStorage.getItem('userInfo'))
   : null
 
+// Take state info from local storage (browser) and input into redux store
 const initialState = {
   bucket: { bucketItems: bucketItemsFromStorage },
   userLogin: { userInfo: userInfoFromStorage }
 }
 
+// To add logic that interacts with redux store outside UI layer
 const middleware = [thunk]
 
+// Create store and add dev tools extension
 const store = createStore(reducer, initialState, composeWithDevTools(applyMiddleware(...middleware)))
 
 export default store
