@@ -17,15 +17,19 @@ function HomeScreen() {
   const { error, loading, activities } = activityList
 
   useEffect(() => {
+
+    const tag = match.tag ? match.tag : "";    
+    dispatch(listActivities(tag))
     
-    dispatch(listActivities(match.tag))
-    
-  }, [dispatch])
+  }, [dispatch, match])
 
   return (
     <div>
       <Row>
-        <h1 className="font">Seize the day</h1>
+        {
+          match.tag ? <h1 className="font">{match.tag}</h1>
+            : <h1 className="font">Seize the day</h1>
+        }
       </Row>
       <Row>
         {loading ? <Loader />

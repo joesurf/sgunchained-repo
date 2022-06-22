@@ -55,7 +55,7 @@
 
 ### Level of Achievement
 
-<p>Apollo</p>
+<p>Gemini</p>
 
 ### Project Scope
 

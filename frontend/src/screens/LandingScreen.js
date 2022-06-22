@@ -35,13 +35,20 @@ function LandingScreen() {
         {tags.map(tag => (
           <Col key={tag._id} >
             <Link to={`/home/${tag.value}`}>
-              <Button
+              <button
+                type="button"
+                name="button"
+                className="btn-3d-1">
+                <h5 className='buttontext'>{tag.value}</h5>
+              </button>
+
+              {/* <Button
                 variant="warning"
                 //onClick={tagSelector}
                 className='btn btn-outline' 
                 type='button' >
                 <h5 className='buttontext'>{tag.value}</h5>
-              </Button>
+              </Button> */}
             </Link>
           </Col>
         ))}
