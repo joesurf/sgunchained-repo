@@ -24,9 +24,17 @@ const userInfoFromStorage = localStorage.getItem('userInfo')
   ? JSON.parse(localStorage.getItem('userInfo'))
   : null
 
+  const subscriptionDetailsFromStorage = localStorage.getItem('subscriptionDetails')
+  ? JSON.parse(localStorage.getItem('subscriptionDetails'))
+  : {}
+
+
 // Take state info from local storage (browser) and input into redux store
 const initialState = {
-  bucket: { bucketItems: bucketItemsFromStorage },
+  bucket: { 
+    bucketItems: bucketItemsFromStorage,
+    subscriptionDetails: subscriptionDetailsFromStorage,
+  },
   userLogin: { userInfo: userInfoFromStorage }
 }
 

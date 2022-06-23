@@ -1,7 +1,7 @@
-import { BUCKET_ADD_ITEM, BUCKET_REMOVE_ITEM } from '../constants/bucketConstants';
+import { BUCKET_ADD_ITEM, BUCKET_REMOVE_ITEM, BUCKET_SAVE_SUBSCRIPTION_DETAILS } from '../constants/bucketConstants';
 
 
-export const bucketReducer = (state = { bucketItems: [] }, action) => {
+export const bucketReducer = (state = { bucketItems: [], subscriotionDetails: {} }, action) => {
   switch (action.type) {
     case BUCKET_ADD_ITEM:
       const item = action.payload
@@ -25,6 +25,12 @@ export const bucketReducer = (state = { bucketItems: [] }, action) => {
       return {
         ...state,
         bucketItems: state.bucketItems.filter(x => x.activity !== action.payload)
+      }
+
+    case BUCKET_SAVE_SUBSCRIPTION_DETAILS:
+      return {
+        ...state,
+        subscriptionDetails: action.payload
       }
 
     default:

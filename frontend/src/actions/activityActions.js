@@ -20,7 +20,7 @@ import {
         type: ACTIVITY_LIST_SUCCESS,
         payload: data
       })    
-    }, 1000);
+    }, 500);
 
 
   } catch (error) {

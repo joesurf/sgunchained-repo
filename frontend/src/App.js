@@ -12,6 +12,7 @@ import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import ExperienceScreen from './screens/ExperienceScreen';
+import PaymentScreen from './screens/PaymentScreen';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path='/register' element={<RegisterScreen />} />
             <Route path='/login' element={<LoginScreen />} />
             <Route path='/experience' element={<ExperienceScreen />} />
+            <Route path='/payment' element={<PaymentScreen />} />
             <Route path='/profile' element={<ProfileScreen />} />
             <Route path='/activity/:id' element={<ActivityScreen />} />
             <Route path='/bucket' element={<BucketScreen />} >

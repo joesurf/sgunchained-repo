@@ -7,7 +7,9 @@ import Activity from '../components/Activity';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import { listActivities } from '../actions/activityActions';
+
 import HorizontalScrollbar from '../components/HorizontalScrollbar';
+import MusicPlayer from '../components/MusicPlayer';
 
 function HomeScreen() {
 
@@ -45,6 +47,9 @@ function HomeScreen() {
             //   ))}
             // </Row>
         }
+      </Row>
+      <Row>
+        <MusicPlayer></MusicPlayer>
       </Row>
       <Row>
         <h5 className="font">Here's to an unforgettable experience...</h5>
