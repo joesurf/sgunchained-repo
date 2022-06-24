@@ -18,7 +18,16 @@ import {
   USER_UPDATE_PROFILE_REQUEST, 
   USER_UPDATE_PROFILE_SUCCESS, 
   USER_UPDATE_PROFILE_FAIL,
-  USER_UPDATE_PROFILE_RESET
+  USER_UPDATE_PROFILE_RESET,
+
+  USER_LIST_REQUEST, 
+  USER_LIST_SUCCESS, 
+  USER_LIST_FAIL,
+  USER_LIST_RESET,
+
+  USER_DELETE_REQUEST, 
+  USER_DELETE_SUCCESS, 
+  USER_DELETE_FAIL,
 } from '../constants/userConstants';
 
 
@@ -66,6 +75,9 @@ export const logout = () => (dispatch) => {
   })
   dispatch({
     type: USER_DETAILS_RESET
+  })
+  dispatch({
+    type: USER_LIST_RESET
   })
 }
 
@@ -187,6 +199,84 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
   } catch(error) {
     dispatch({
       type: USER_UPDATE_PROFILE_FAIL,
+      payload: error.response && error.response.data.detail
+        ? error.response.data.detail
+        : error.message,
+    })
+  }
+}
+
+
+export const listUsers = () => async (dispatch, getState) => {
+  try {
+    dispatch({
+      type: USER_LIST_REQUEST,
+    })
+
+    const {
+      userLogin: { userInfo }
+    } = getState()
+
+    const config = {
+      headers: {
+        'Content-type': 'application/json',
+        Authorization: `Bearer ${userInfo.token}`
+      }
+    }
+
+    const { data } = await axios.get(
+      `/api/users/`,
+      config
+    )
+
+    dispatch({
+      type: USER_LIST_SUCCESS,
+      payload: data
+    })
+
+
+  } catch(error) {
+    dispatch({
+      type: USER_LIST_FAIL,
+      payload: error.response && error.response.data.detail
+        ? error.response.data.detail
+        : error.message,
+    })
+  }
+}
+
+
+export const deleteUser = (id) => async (dispatch, getState) => {
+  try {
+    dispatch({
+      type: USER_DELETE_REQUEST,
+    })
+
+    const {
+      userLogin: { userInfo }
+    } = getState()
+
+    const config = {
+      headers: {
+        'Content-type': 'application/json',
+        Authorization: `Bearer ${userInfo.token}`
+      }
+    }
+
+    const { data } = await axios.delete(
+      `/api/users/delete/${id}/`,
+      config
+    )
+
+    dispatch({
+      type: USER_DELETE_SUCCESS,
+      payload: data
+    })
+
+
+  } catch(error) {
+    dispatch({
+      type: USER_DELETE_FAIL,
       payload: error.response && error.response.data.detail
         ? error.response.data.detail
         : error.message,
