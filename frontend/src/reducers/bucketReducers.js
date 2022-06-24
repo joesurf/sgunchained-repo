@@ -1,4 +1,11 @@
-import { BUCKET_ADD_ITEM, BUCKET_REMOVE_ITEM, BUCKET_SAVE_SUBSCRIPTION_DETAILS } from '../constants/bucketConstants';
+import { 
+  BUCKET_ADD_ITEM, 
+  BUCKET_REMOVE_ITEM, 
+  
+  BUCKET_SAVE_SUBSCRIPTION_DETAILS, 
+  
+  BUCKET_SAVE_PAYMENT_METHOD 
+} from '../constants/bucketConstants';
 
 
 export const bucketReducer = (state = { bucketItems: [], subscriotionDetails: {} }, action) => {
@@ -31,6 +38,12 @@ export const bucketReducer = (state = { bucketItems: [], subscriotionDetails: {}
       return {
         ...state,
         subscriptionDetails: action.payload
+      }
+    
+    case BUCKET_SAVE_PAYMENT_METHOD:
+      return {
+        ...state,
+        paymentMethod: action.payload
       }
 
     default:

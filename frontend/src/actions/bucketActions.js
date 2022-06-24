@@ -1,5 +1,13 @@
 import axios from 'axios';
-import { BUCKET_ADD_ITEM, BUCKET_REMOVE_ITEM, BUCKET_SAVE_SUBSCRIPTION_DETAILS } from '../constants/bucketConstants';
+import { 
+  BUCKET_ADD_ITEM, 
+  BUCKET_REMOVE_ITEM, 
+  
+  BUCKET_SAVE_SUBSCRIPTION_DETAILS, 
+  
+  BUCKET_SAVE_PAYMENT_METHOD 
+} from '../constants/bucketConstants';
+
 
 export const addToBucket = (id, quantity) => async (dispatch, getState) => {
   const { data } = await axios.get(`/api/activities/id/${id}`)
@@ -37,4 +45,14 @@ export const saveSubscriptionDetails = (data) => async (dispatch) => {
   })
 
   localStorage.setItem('subscriptionDetails', JSON.stringify(data))
+}
+
+
+export const savePaymentMethod = (data) => async (dispatch) => {
+  dispatch({
+    type: BUCKET_SAVE_PAYMENT_METHOD,
+    payload: data,
+  })
+
+  localStorage.setItem('paymentMethod', JSON.stringify(data))
 }
