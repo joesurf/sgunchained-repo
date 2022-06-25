@@ -7,7 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 
-import { listActivities, deleteActivity } from '../actions/activityActions';
+import { listActivities, deleteActivity, createActivity } from '../actions/activityActions';
+import { ACTIVITY_CREATE_RESET } from '../constants/activityConstants'
 
 
 function ActivityListScreen() {
@@ -22,17 +23,26 @@ function ActivityListScreen() {
   const activityDelete = useSelector(state => state.activityDelete)
   const { loading:loadingDelete, error:errorDelete, success:successDelete } = activityDelete
 
+  const activityCreate = useSelector(state => state.activityCreate)
+  const { loading:loadingCreate, error:errorCreate, success:successCreate, product:createdActivity } = activityCreate
+
   const userLogin = useSelector(state => state.userLogin)
   const { userInfo } = userLogin
 
 
   useEffect(() => {
-    if (userInfo && userInfo.isAdmin) {
-      dispatch(listActivities())
-    } else {
+    dispatch({ type: ACTIVITY_CREATE_RESET })
+
+    if (!userInfo.isAdmin) {
       navigate('/login')
     }
-  }, [dispatch, navigate, userInfo, successDelete])
+
+    if (successCreate) {
+      navigate(`/admin/activity/${createdActivity._id}/edit`)
+    } else {
+      dispatch(listActivities())
+    }
+  }, [dispatch, navigate, userInfo, successDelete, successCreate, createdActivity])
 
   const deleteHandler = (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
@@ -40,9 +50,8 @@ function ActivityListScreen() {
     }
   }
 
-  const createActivityHandler = (id) => {
-    //create
-
+  const createActivityHandler = () => {
+    dispatch(createActivity())
   }
 
 
@@ -61,6 +70,9 @@ function ActivityListScreen() {
 
       {loadingDelete && <Loader/>}
       {errorDelete && <Message variant='danger'>{errorDelete}</Message>}
+
+      {loadingCreate && <Loader/>}
+      {errorCreate && <Message variant='danger'>{errorCreate}</Message>}
 
       {loading
         ? (<Loader />)
@@ -88,7 +100,7 @@ function ActivityListScreen() {
                       <td>{activity.genre}</td>
 
                       <td>
-                        <LinkContainer to={`/admin/activities/${activity._id}/edit`}>
+                        <LinkContainer to={`/admin/activity/${activity._id}/edit`}>
                           <Button variant='light' className='btn-sm'>
                             <i className='fas fa-edit'></i>
                           </Button>

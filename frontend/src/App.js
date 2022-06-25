@@ -16,6 +16,7 @@ import PaymentScreen from './screens/PaymentScreen';
 import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
 import ActivityListScreen from './screens/ActivityListScreen';
+import ActivityEditScreen from './screens/ActivityEditScreen';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
               <Route path='userlist' element={<UserListScreen />} />
               <Route path='user/:id/edit' element={<UserEditScreen />} />
               <Route path='activitylist' element={<ActivityListScreen />} />
+              <Route path='activity/:id/edit' element={<ActivityEditScreen />} />
             </Route>
           </Routes>
         </Container>

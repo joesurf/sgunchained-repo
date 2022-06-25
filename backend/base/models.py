@@ -18,7 +18,7 @@ class Activity(models.Model):
     _id = models.AutoField(primary_key=True, editable=False)
     price = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
     link = models.CharField(max_length=200, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True, default='/chang-duong-Sj0iMtq_Z4w-unsplash.jpg')
     description = models.TextField(null=True, blank=True)
     name = models.CharField(max_length=200, null=True, blank=True)
     genre = models.CharField(max_length=200, null=True, blank=True)

@@ -30,7 +30,39 @@ def getActivity(request, pk):
   return Response(serializer.data)
 
 
-@api_view(['GET'])
+@api_view(['POST'])
+@permission_classes([IsAdminUser])
+def createActivity(request):
+  user = request.user
+
+  activity = Activity.objects.create(
+    # user=user,
+    name='Sample',
+    price=0,
+    description=''
+  )
+
+  serializer = ActivitySerializer(activity, many=False)
+  return Response(serializer.data)
+
+
+@api_view(['PUT'])
+@permission_classes([IsAdminUser])
+def updateActivity(request, pk):
+  data = request.data
+  activity = Activity.objects.get(_id=pk)
+
+  activity.name = data['name']
+  activity.price = data['price']
+  activity.description = data['description']
+
+  activity.save()
+
+  serializer = ActivitySerializer(activity, many=False)
+  return Response(serializer.data)
+
+
+@api_view(['DELETE'])
 @permission_classes([IsAdminUser])
 def deleteActivity(request, pk):
   activity = Activity.objects.get(_id=pk)

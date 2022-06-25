@@ -10,6 +10,16 @@ import {
   ACTIVITY_DELETE_REQUEST,
   ACTIVITY_DELETE_SUCCESS,
   ACTIVITY_DELETE_FAIL,
+
+  ACTIVITY_CREATE_REQUEST,
+  ACTIVITY_CREATE_SUCCESS,
+  ACTIVITY_CREATE_FAIL,
+  ACTIVITY_CREATE_RESET,
+
+  ACTIVITY_UPDATE_REQUEST,
+  ACTIVITY_UPDATE_SUCCESS,
+  ACTIVITY_UPDATE_FAIL,
+  ACTIVITY_UPDATE_RESET,
  } from '../constants/activityConstants';
 
 
@@ -47,7 +57,7 @@ export const activityDetailsReducer = (state = { activity: {reviews: []} }, acti
 }
 
 
-export const activityDeleteReducer = (state = { }, action) => {
+export const activityDeleteReducer = (state = {}, action) => {
   switch(action.type){
     case ACTIVITY_DELETE_REQUEST:
       return { loading: true }
@@ -57,6 +67,46 @@ export const activityDeleteReducer = (state = { }, action) => {
     
     case ACTIVITY_DELETE_FAIL:
       return { loading: false, error: action.payload }
+
+    default:
+      return state
+  }
+}
+
+
+export const activityCreateReducer = (state = {}, action) => {
+  switch(action.type){
+    case ACTIVITY_CREATE_REQUEST:
+      return { loading: true }
+
+    case ACTIVITY_CREATE_SUCCESS:
+      return { loading: false, success: true, product: action.payload }
+    
+    case ACTIVITY_CREATE_FAIL:
+      return { loading: false, error: action.payload }
+
+    case ACTIVITY_CREATE_RESET:
+      return {}
+
+    default:
+      return state
+  }
+}
+
+
+export const activityUpdateReducer = (state = { product: {} }, action) => {
+  switch(action.type){
+    case ACTIVITY_UPDATE_REQUEST:
+      return { loading: true }
+
+    case ACTIVITY_UPDATE_SUCCESS:
+      return { loading: false, success: true, product: action.payload }
+    
+    case ACTIVITY_UPDATE_FAIL:
+      return { loading: false, error: action.payload }
+
+    case ACTIVITY_UPDATE_RESET:
+      return { product: {} }
 
     default:
       return state
