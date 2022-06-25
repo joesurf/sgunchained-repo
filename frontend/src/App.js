@@ -14,6 +14,7 @@ import ProfileScreen from './screens/ProfileScreen';
 import ExperienceScreen from './screens/ExperienceScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import UserListScreen from './screens/UserListScreen';
+import UserEditScreen from './screens/UserEditScreen';
 
 
 function App() {
@@ -36,7 +37,10 @@ function App() {
             <Route path='/bucket' element={<BucketScreen />} >
               <Route path=':id' element={<BucketScreen />} />
             </Route>
-            <Route path='/admin/userlist' element={<UserListScreen />} />
+            <Route path='/admin' >
+              <Route path='userlist' element={<UserListScreen />} />
+              <Route path='user/:id/edit' element={<UserEditScreen />} />
+            </Route>
           </Routes>
         </Container>
       </main>
