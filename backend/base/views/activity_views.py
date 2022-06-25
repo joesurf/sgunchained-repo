@@ -28,3 +28,11 @@ def getActivity(request, pk):
   activity = Activity.objects.get(_id=pk)
   serializer = ActivitySerializer(activity, many=False)
   return Response(serializer.data)
+
+
+@api_view(['GET'])
+@permission_classes([IsAdminUser])
+def deleteActivity(request, pk):
+  activity = Activity.objects.get(_id=pk)
+  activity.delete()
+  return Response("Activity deleted")

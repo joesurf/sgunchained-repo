@@ -15,6 +15,7 @@ import ExperienceScreen from './screens/ExperienceScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
+import ActivityListScreen from './screens/ActivityListScreen';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
             <Route path='/admin' >
               <Route path='userlist' element={<UserListScreen />} />
               <Route path='user/:id/edit' element={<UserEditScreen />} />
+              <Route path='activitylist' element={<ActivityListScreen />} />
             </Route>
           </Routes>
         </Container>
