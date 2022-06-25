@@ -68,3 +68,16 @@ def deleteActivity(request, pk):
   activity = Activity.objects.get(_id=pk)
   activity.delete()
   return Response("Activity deleted")
+
+
+@api_view(['POST'])
+def uploadImage(request):
+  data = request.data
+
+  activity_id = data['activity_id']
+  activity = Activity.objects.get(_id=activity_id)
+
+  activity.image = request.FILES.get('image')
+
+  activity.save()
+  return Response('Image uploaded')

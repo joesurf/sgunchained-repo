@@ -7,6 +7,7 @@ urlpatterns = [
     
     # ordered to avoid slug confusion
     path('create/', views.createActivity, name="activity-create"),
+    path('upload/', views.uploadImage, name="image-upload"),    
 
     path('<slug:tag_slug>/', views.getActivities, name="activities_by_tag"),
     path('id/<str:pk>/', views.getActivity, name="activity"),

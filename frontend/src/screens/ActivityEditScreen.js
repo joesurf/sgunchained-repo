@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Link, useParams, useLocation, useNavigate } from 'react-router-dom';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
@@ -17,6 +18,7 @@ function ActivityEditScreen() {
   const [price, setPrice] = useState(0)
   const [image, setImage] = useState('')
   const [description, setDescription] = useState('')
+  const [uploading, setUploading] = useState(false)
 
   const match = useParams()
   const location = useLocation()
@@ -59,6 +61,36 @@ function ActivityEditScreen() {
       image,
       description,
     }))
+  }
+
+  const uploadFileHandler = async (e) => {
+    const file = e.target.files[0]
+    const formData = new FormData()
+
+    formData.append('image', file)
+    formData.append('activity_id', activityId)
+
+    setUploading(true)
+
+    try {
+      const config = {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }
+
+      const { data } = await axios.post(
+        `/api/activities/upload/`,
+        formData,
+        config
+      )
+
+      setImage(data)
+      setUploading(false)
+
+    } catch (error) {
+      setUploading(false)
+    }
   }
 
   return (
@@ -105,11 +137,19 @@ function ActivityEditScreen() {
                         <Form.Label>Image</Form.Label>
                         <Form.Control
                           type='text'
-                          placeholder='Enter image'
                           value={image}
-                          onChange={(e) => setImage(e.target.value)}
+                          disabled
                         >
                         </Form.Control>
+                        <Form.Control
+                          type='file'
+                          label='Choose File'
+                          onChange={uploadFileHandler}
+                        >
+                        </Form.Control>
+
+                        {uploading && <Loader />}
+
                       </Form.Group>
 
                       <Form.Group controlId='description'>
@@ -137,4 +177,4 @@ function ActivityEditScreen() {
   )
 }
 
-export default ActivityEditScreen
+export default ActivityEditScreen;
