@@ -32,6 +32,11 @@ const tags = [
     '_id': '4',
     'button': 'chasing the sun',
     'value': "chasing-the-sun"
+  },
+  {
+    '_id': '5',
+    'button': 'me, myself and i',
+    'value': "me-myself-and-i"
   }
 ]
 
@@ -86,7 +91,7 @@ function LandingScreen() {
         {loading ? <Loader />
           : error ? <Message variant='danger'>{error}</Message>  
             :
-            <HorizontalScrollbar items={activities} />
+            <HorizontalScrollbar items={shuffle(activities).slice(0, 9)} />
         }
       </Row>
       <MusicPlayer></MusicPlayer>

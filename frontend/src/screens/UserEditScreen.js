@@ -94,7 +94,7 @@ function UserEditScreen() {
                         </Form.Control>
                       </Form.Group>
 
-                      <Form.Group controlId='isAdmin'>
+                      {/* <Form.Group controlId='isAdmin'>
                         <Form.Check
                           type='checkbox'
                           label='Admin'
@@ -102,7 +102,7 @@ function UserEditScreen() {
                           onChange={(e) => setIsAdmin(e.target.check)}
                         >
                         </Form.Check>
-                      </Form.Group>
+                      </Form.Group> */}
 
                       <Button type='submit' variant='primary'>
                         Update
