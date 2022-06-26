@@ -37,7 +37,22 @@ const tags = [
     '_id': '5',
     'button': 'me, myself and i',
     'value': "me-myself-and-i"
-  }
+  },
+  {
+    '_id': '6',
+    'button': 'cool for the summer',
+    'value': "cool-for-the-summer"
+  },
+  {
+    '_id': '7',
+    'button': 'i took a pill in ibiza',
+    'value': "i-took-a-pill-in-ibiza"
+  },
+  {
+    '_id': '8',
+    'button': 'strawberries & cigarettes',
+    'value': "strawberries-cigarettes"
+  },
 ]
 
 

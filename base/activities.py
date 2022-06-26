@@ -206,14 +206,96 @@ activities = [
     'image': '/images/golf',
     'tags': 'cool for the summer',
   },
-  """
   {
     '_id': '31',
-    'name': '',
-    'image': '/images/',
+    'name': 'Go bowling or pool at midnight',
+    'image': '/images/midnight-bowl',
+    'tags': 'cool for the summer',
+  },
+  {
+    '_id': '32',
+    'name': 'Do a paparazzi photoshoot',
+    'image': '/images/paparazzi-photoshoot',
     'tags': '',
   },
-  """
+  {
+    '_id': '33',
+    'name': 'Try to create high fashion shoots',
+    'image': '/images/fashion-shoots',
+    'tags': '',
+  },
+  {
+    '_id': '34',
+    'name': 'Conduct a powerpoint presentation on your favourite topic',
+    'image': '/images/favourite-topic',
+    'tags': '',
+  },
+  {
+    '_id': '35',
+    'name': 'Get a piercing or tattoo',
+    'image': '/images/piercing-tattoo',
+    'tags': '',
+  },
+  {
+    '_id': '36',
+    'name': 'Recreate pinterest photos',
+    'image': '/images/pinterest-recreate',
+    'tags': '',
+  },
+  {
+    '_id': '37',
+    'name': 'Climb a tree',
+    'image': '/images/climb-tree',
+    'tags': '',
+  },
+  {
+    '_id': '38',
+    'name': 'Chill at a reservoir',
+    'image': '/images/chill-reservoir',
+    'tags': '',
+  },
+  {
+    '_id': '39',
+    'name': 'Make a journal/scrapbook/diary',
+    'image': '/images/journal',
+    'tags': '',
+  },
+  {
+    '_id': '40',
+    'name': 'Go on a bus/mrt without a destination in mind',
+    'image': '/images/random-ride',
+    'tags': '',
+  },
+  {
+    '_id': '41',
+    'name': 'Dance in the rain',
+    'image': '/images/rain-dance',
+    'tags': '',
+  },
+  {
+    '_id': '42',
+    'name': 'Have a board game night',
+    'image': '/images/board-game',
+    'tags': '',
+  },
+  {
+    '_id': '43',
+    'name': 'Sleepover with friends',
+    'image': '/images/sleepover-friends',
+    'tags': '',
+  },
+  {
+    '_id': '44',
+    'name': 'Go to the trampoline park',
+    'image': '/images/trampoline-park',
+    'tags': '',
+  },
+  {
+    '_id': '45',
+    'name': 'Go on a dating app and swipe for fun',
+    'image': '/images/dating-fun',
+    'tags': '',
+  },
 ]
 
 """
