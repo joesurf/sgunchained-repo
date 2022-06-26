@@ -1,17 +1,17 @@
-from django.shortcuts import render
-from django.http import JsonResponse
-from django.contrib.auth.models import User
-from django.contrib.auth.hashers import make_password
+from django.conf import settings
+from django.http import HttpResponse
+from django.template.loader import render_to_string
 
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import IsAuthenticated, IsAdminUser
-from rest_framework.response import Response
-from rest_framework import status
-
-from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-from rest_framework_simplejwt.views import TokenObtainPairView
-
-from base.models import Activity
-from base.serializer import *
+# import weasyprint
 
 # Create your views here.
+# def trip_pdf(request, trip):
+#   html = render_to_string('pdf.html', {
+#     'activity': trip
+#   })
+#   response = HttpResponse(content_type='application/pdf')
+#   response['Content-Disposition'] = f'filename=unchained.pdf'
+#   weasyprint.HTML(string=html).write_pdf(
+#     response,
+#   )
+#   return response

@@ -12,14 +12,14 @@ import { saveSubscriptionDetails } from '../actions/bucketActions';
 
 function ExperienceScreen() {
 
-  const bucket = useSelector(state => state.bucket)
-  const { subscriptionDetails } = bucket
+  // const bucket = useSelector(state => state.bucket)
+  // const { subscriptionDetails } = bucket
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const [name, setName] = useState(subscriptionDetails.name)
-  const [email, setEmail] = useState(subscriptionDetails.email)
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
 
   const submitHandler = (e) => {
     e.preventDefault()
@@ -30,7 +30,7 @@ function ExperienceScreen() {
 
   return (
     <FormContainer>
-      <h1>Shipping</h1>
+      <h1>Get this delivered to you</h1>
       <Form onSubmit={submitHandler}>
       <Form.Group controlId='name'>
           <Form.Control

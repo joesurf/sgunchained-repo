@@ -5,6 +5,8 @@ import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import Message from '../components/Message';
 import { addToBucket, removeFromBucket } from '../actions/bucketActions';
 
+import jsPDF from 'jspdf';
+
 
 function BucketScreen() {
   const match = useParams()
@@ -28,8 +30,11 @@ function BucketScreen() {
     dispatch(removeFromBucket(id))
   }
 
-  const checkoutHandler = () => {
-    navigate('/experience')
+  const pdfGenerate = () => {
+    const doc = new jsPDF('portrait', 'px', 'a4', 'false')
+    doc.setFont('Montserrat', 'bold')
+    doc.text(60, 60, 'Look out for a super slick pdf with the activities you have selected')
+    doc.save('unchained.pdf')
   }
 
   return (
@@ -105,9 +110,9 @@ function BucketScreen() {
               type='button' 
               className='btn-block'
               disabled={bucketItems.length === 0}
-              onClick={checkoutHandler}
+              onClick={pdfGenerate}
             >
-              Proceed to Checkout
+              Download PDF
             </Button>
           </ListGroup.Item>
         </Card>
