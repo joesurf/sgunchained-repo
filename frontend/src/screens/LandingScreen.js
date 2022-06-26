@@ -5,15 +5,18 @@ import { Row, Col, Image, ListGroup, Button, Card, Form } from 'react-bootstrap'
 const tags = [
   {
     '_id': '1',
-    'value': "popular"
+    'button': "young, dumb & broke",
+    'value': "young-dumb-broke"
   },
   {
     '_id': '2',
-    'value': "cheap"
+    'button': 'just imagine it',
+    'value': "just-imagine-it"
   },
   {
     '_id': '3',
-    'value': "unconventional"
+    'button': 'perfect strangers',
+    'value': "perfect-strangers"
   }
 ]
 
@@ -39,7 +42,7 @@ function LandingScreen() {
                 type="button"
                 name="button"
                 className="btn-3d-1">
-                <h5 className='buttontext'>{tag.value}</h5>
+                <h5 className='buttontext'>{tag.button}</h5>
               </button>
 
               {/* <Button

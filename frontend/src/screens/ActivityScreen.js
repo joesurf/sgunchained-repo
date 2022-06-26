@@ -46,13 +46,9 @@ function ActivityScreen() {
                       <h3>{activity.name}</h3>
                     </ListGroup.Item>
 
-                    <ListGroup.Item>
+                    {/* <ListGroup.Item>
                       <Rating value={activity.rating} text={`${activity.numReviews} reviews`} color={`#f8e825`} />
-                    </ListGroup.Item>
-
-                    <ListGroup.Item>
-                      Price: ${activity.price}
-                    </ListGroup.Item>
+                    </ListGroup.Item> */}
 
                     <ListGroup.Item>
                       Description: {activity.description}
@@ -72,7 +68,7 @@ function ActivityScreen() {
                         </Row>
                       </ListGroup.Item>
 
-                      <ListGroup.Item>
+                      {/* <ListGroup.Item>
                         <Row>
                           <Col>Genre:</Col>
                           <Col>
@@ -101,7 +97,7 @@ function ActivityScreen() {
                             </Form.Control>
                           </Col>
                         </Row>
-                      </ListGroup.Item>
+                      </ListGroup.Item> */}
 
                       <ListGroup.Item>
                         <Button 

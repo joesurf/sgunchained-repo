@@ -18,6 +18,7 @@ function ActivityEditScreen() {
   const [price, setPrice] = useState(0)
   const [image, setImage] = useState('')
   const [description, setDescription] = useState('')
+  const [tags, setTags] = useState('')
   const [uploading, setUploading] = useState(false)
 
   const match = useParams()
@@ -47,6 +48,7 @@ function ActivityEditScreen() {
         setPrice(activity.price)
         setImage(activity.image)
         setDescription(activity.description)
+        setTags(activity.tags)
       }
     }
 
@@ -60,6 +62,7 @@ function ActivityEditScreen() {
       price,
       image,
       description,
+      tags,
     }))
   }
 
@@ -122,17 +125,6 @@ function ActivityEditScreen() {
                         </Form.Control>
                       </Form.Group>
 
-                      <Form.Group controlId='price'>
-                        <Form.Label>Price</Form.Label>
-                        <Form.Control
-                          type='number'
-                          placeholder='Enter price'
-                          value={price}
-                          onChange={(e) => setPrice(e.target.value)}
-                        >
-                        </Form.Control>
-                      </Form.Group>
-
                       <Form.Group controlId='image'>
                         <Form.Label>Image</Form.Label>
                         <Form.Control
@@ -162,6 +154,28 @@ function ActivityEditScreen() {
                         >
                         </Form.Control>
                       </Form.Group>
+
+                      <Form.Group controlId='price'>
+                        <Form.Label>Price</Form.Label>
+                        <Form.Control
+                          type='number'
+                          placeholder='Enter price'
+                          value={price}
+                          onChange={(e) => setPrice(e.target.value)}
+                        >
+                        </Form.Control>
+                      </Form.Group>
+
+                      {/* <Form.Group controlId='tags'>
+                        <Form.Label>Tags</Form.Label>
+                        <Form.Control
+                          type='text'
+                          placeholder='Enter tags'
+                          value={tags}
+                          onChange={(e) => setTags(e.target.value)}
+                        >
+                        </Form.Control>
+                      </Form.Group> */}
 
                       <Button type='submit' variant='primary'>
                         Update

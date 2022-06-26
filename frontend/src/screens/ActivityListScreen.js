@@ -86,7 +86,7 @@ function ActivityListScreen() {
                     <th>ID</th>
                     <th>NAME</th>
                     <th>PRICE</th>
-                    <th>GENRE</th>
+                    <th>TAGS</th>
                     <th></th>
                   </tr>
                 </thead>
@@ -97,7 +97,7 @@ function ActivityListScreen() {
                       <td>{activity._id}</td>
                       <td>{activity.name}</td>
                       <td>{activity.price}</td>
-                      <td>{activity.genre}</td>
+                      <td>{activity.tags}</td>
 
                       <td>
                         <LinkContainer to={`/admin/activity/${activity._id}/edit`}>
