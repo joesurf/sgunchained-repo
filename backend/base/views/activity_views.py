@@ -10,6 +10,18 @@ from base.serializer import *
 
 from taggit.models import Tag
 
+import random
+
+
+# Functions 
+def get_random_items(qs):
+  number_of_items = 9
+  possible_ids = list(qs.values_list('_id', flat=True))
+
+  random_ids = random.choices(possible_ids, k=number_of_items)
+  return qs.filter(pk__in=random_ids)
+
+
 
 # Create your views here.
 @api_view(['GET'])
@@ -19,6 +31,7 @@ def getActivities(request, tag_slug=None):
   if tag_slug:
     tag = get_object_or_404(Tag, slug=tag_slug)
     activities = activities.filter(tags__in=[tag])
+
   serializer = ActivitySerializer(activities, many=True)
   return Response(serializer.data)
 

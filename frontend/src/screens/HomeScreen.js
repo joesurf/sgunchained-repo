@@ -51,9 +51,6 @@ function HomeScreen() {
       <Row>
         <MusicPlayer></MusicPlayer>
       </Row>
-      <Row>
-        <h5 className="font">Here's to an unforgettable experience...</h5>
-      </Row>
     </div>
   )
 }

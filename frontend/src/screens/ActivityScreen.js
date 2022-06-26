@@ -31,7 +31,7 @@ function ActivityScreen() {
 
   return (
     <div>
-      <Link to='/home/' className='btn btn-light my-3'>Go Back</Link>
+      <Link to='/' className='btn btn-light my-3'>Go Back</Link>
       {loading ? <Loader />
         : error ? <Message variant='danger'>{error}</Message>  
           : (
