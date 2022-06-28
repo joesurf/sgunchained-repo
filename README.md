@@ -114,16 +114,46 @@ alternatives are friends, Google or social media. </p>
   <ol>
     <strong>Token Authentication</strong>
     <p>Set up JSON web tokens to authenticate users. </p>
+    <div align="center">
+      <a href="">
+        <img src="./resources/LoginPage.png" alt="LoginPage" width="600" height="auto">
+      </a>
+    </div>
+    <p>Users will be able to register, and upon loggin in, is authenticated and assigned a token. Registration and login is not required to access the core features of the website but will give access to extensions.</p>
   </ol>
 </li>
-<div align="center">
-  <a href="">
-    <img src="./resources/LoginPage.png" alt="LoginPage" width="200" height="auto">
-  </a>
-</div>
-<p>Users will be able to register, and upon loggin in, is authenticated and assigned a token. Registration and login is not required to access the core features of the website but will give access to extensions.</p>
 
-#### Milestone 1 - Setup > User Registration and Login
+
+#### Milestone 2 - Core > Home, Activity and Admin Page
+
+<li>
+  <ol>
+    <strong>Home Page - Featured Activities</strong>
+    <p>Upon visiting the website, users are shown a set of activities which they can scroll through and click on to get more information. Activities shown are randomly generated every time the page is refreshed and limited to 9 only.</p>
+    <div align="center">
+      <a href="">
+        <img src="./resources/HomePage-Film.png" alt="HomePage-Activities" width="600" height="auto">
+      </a>
+    </div>
+  </ol>
+    <ol>
+    <strong>Home Page -  Button Filters</strong>
+    <p>In addition, users can click on the button theme filters which will reveal activities that are associated with that particular theme. Every time a button is clicked, all the buttons will be randomly generated in order to offer a wide variety of themes and also add an element of mystery.</p>
+    <div align="center">
+      <a href="">
+        <img src="./resources/HomePage-Buttons.png" alt="HomePage-Buttons" width="600" height="auto">
+      </a>
+    </div>
+  </ol>
+    <ol>
+    <strong></strong>
+    <p></p>
+  </ol>
+    <ol>
+    <strong></strong>
+    <p></p>
+  </ol>
+</li>
 
 
 
