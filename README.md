@@ -24,7 +24,7 @@
     <a href="https://github.com/joesurf/sgunchained-repo"><strong>Explore our documentation »</strong></a>
     <br />
     <br />
-    <a href="www.sgunchained.com">View Demo</a>
+    <a href="http://www.sgunchained.com">View Demo</a>
  
   </p>
 </div>
