@@ -24,7 +24,7 @@
     <a href="https://github.com/joesurf/sgunchained-repo"><strong>Explore our documentation »</strong></a>
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="www.sgunchained.com">View Demo</a>
  
   </p>
 </div>
@@ -86,10 +86,46 @@ alternatives are friends, Google or social media. </p>
 - [ ] As a user who wants a new experience, I want to be able to find interesting options quickly, subject to various constraints.
 - [ ] As a user who is unsure where to start, I want places and activities to be recommended to me based on my past choices and my preferences.
 - [ ] As a user who has tried the experience, I want to be able to note down my thoughts about the experience.
-- [ ] As a user who has an interesting experience, I want to be able to share it with others by uploading an activity.
+- [ ] As a user who has used the platform, I want to be able to share my experience with others.
 
 #### Admin
-- [ ] As an admin who manages the site, I want to be able to add, update and delete the details of activities. 
+- [ ] As an admin who manages the site, I want to be able to add, update and delete the details of users and activities. 
+
+
+### Project Scope
+
+<p>The scope of our Orbital project can be broken down into 3 parts - <strong>Setup, Core and Extensions.</strong></p>
+<p>Setup - <strong>User Registration and Login</strong></p>
+<p>Core - <strong>Home, Activity and Admin Page</strong></p>
+<p>Extensions - <strong>Activity Recommendation, Bucket Templates, Social Media Connections</strong></p>
+<p>Testing - <strong>WIP</strong></p>
+
+#### Milestone 1 - Setup > User Registration and Login
+
+<li>
+  <ol>
+    <strong>Frontend Web Routing</strong>
+    <p>Set up routing for our website from the homepage to profile and activities page.</p>
+  </ol>
+  <ol>
+    <strong>Backend API Endpoints & Database</strong>
+    <p>Set up backend API endpoints and a database for user registration and login.</p>
+  </ol>
+  <ol>
+    <strong>Token Authentication</strong>
+    <p>Set up JSON web tokens to authenticate users. </p>
+  </ol>
+</li>
+<div align="center">
+  <a href="">
+    <img src="./resources/LoginPage.png" alt="LoginPage" width="200" height="auto">
+  </a>
+</div>
+<p>Users will be able to register, and upon loggin in, is authenticated and assigned a token. Registration and login is not required to access the core features of the website but will give access to extensions.</p>
+
+#### Milestone 1 - Setup > User Registration and Login
+
+
 
 
 ### Concept Design 
@@ -100,7 +136,7 @@ alternatives are friends, Google or social media. </p>
   <img src="./resources/ERD.png" alt="Logo" width="600" height="auto">
 </span>
 
-<p>Users can create experiences using buckets which is a set of activities they can do. Each bucket can be filled with various activities which are filtered by cost, location and pax. In addition, users can write notes for each experiences. </p>
+<p>Users can create experiences using buckets which is a set of activities they can do. Each bucket can be filled with various activities which are filtered by cost, location and pax. In addition, users can write notes for each experience and download them in a pdf. </p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -120,7 +156,7 @@ alternatives are friends, Google or social media. </p>
 
 ## Roadmap
 
-<a href=""><strong>Check out the website (NA) »</strong></a>
+<a href="www.sgunchained.com"><strong>Check out the website»</strong></a>
 
 - [x] User Login and Registration
 - [x] Activities Page
