@@ -137,22 +137,68 @@ alternatives are friends, Google or social media. </p>
     </div>
   </ol>
     <ol>
-    <strong>Home Page -  Button Filters</strong>
-    <p>In addition, users can click on the button theme filters which will reveal activities that are associated with that particular theme. Every time a button is clicked, all the buttons will be randomly generated in order to offer a wide variety of themes and also add an element of mystery.</p>
-    <div align="center">
-      <a href="">
-        <img src="./resources/HomePage-Buttons.png" alt="HomePage-Buttons" width="600" height="auto">
-      </a>
-    </div>
-  </ol>
+      <strong>Home Page -  Button Filters</strong>
+      <p>In addition, users can click on the button theme filters which will reveal activities that are associated with that particular theme. Every time a button is clicked, all the buttons will be randomly generated in order to offer a wide variety of themes and also add an element of mystery.</p>
+      <div align="center">
+        <a href="">
+          <img src="./resources/HomePage-Buttons.png" alt="HomePage-Buttons" width="600" height="auto">
+        </a>
+      </div>
+    </ol>
     <ol>
-    <strong></strong>
-    <p></p>
-  </ol>
+      <strong>Profile Page</strong>
+      <p>Every user will have their own profile page. Here, users can choose to update their name, email and password.</p>
+      <div align="center">
+        <a href="">
+          <img src="./resources/ProfilePage.png" alt="ProfilePage" width="600" height="auto">
+        </a>
+      </div>
+    </ol>
     <ol>
-    <strong></strong>
-    <p></p>
-  </ol>
+      <strong>Bucket Page</strong>
+      <p>Users can add activities that they are interested in into this page. In addition, they can delete them as well. This is meant to be the confirmation page before users download activity information.</p>
+      <div align="center">
+        <a href="">
+          <img src="./resources/BucketPage.png" alt="BucketPage" width="600" height="auto">
+        </a>
+      </div>
+    </ol>
+    <ol>
+      <strong>Bucket Page - Download PDF</strong>
+      <p>Users can download a cool pamphlet [WIP] that includes more details about the activities they have chosen, including location and duration.</p>
+      <div align="center">
+        <a href="">
+          <img src="./resources/BucketPage-Download.png" alt="BucketPage-Download" width="600" height="auto">
+        </a>
+      </div>
+    </ol>
+    <ol>
+      <strong>Admin Page</strong>
+      <p>Admins are given access to an additional admin page in the navigation bar where they can edit information about users and activities.</p>
+      <div align="center">
+        <a href="">
+          <img src="./resources/AdminPage.png" alt="AdminPage" width="600" height="auto">
+        </a>
+      </div>
+    </ol>
+    <ol>
+      <strong>Admin Page - Edit Users</strong>
+      <p>Admins can see the list of users, update or delete user information at this page.</p>
+      <div align="center">
+        <a href="">
+          <img src="./resources/AdminPage-EditUsers.png" alt="AdminPage-EditUsers" width="600" height="auto">
+        </a>
+      </div>
+    </ol>
+    <ol>
+      <strong>Admin Page - Edit Activities</strong>
+      <p>Admins can see the full list of activities, create, update and delete activities at this page.</p>
+      <div align="center">
+        <a href="">
+          <img src="./resources/AdminPage-EditActivities.png" alt="AdminPage-EditActivities" width="600" height="auto">
+        </a>
+      </div>
+    </ol>
 </li>
 
 
@@ -162,11 +208,13 @@ alternatives are friends, Google or social media. </p>
 
 #### Entity Relationship Diagram
 
-<span>
-  <img src="./resources/ERD.png" alt="Logo" width="600" height="auto">
-</span>
-
 <p>Users can create experiences using buckets which is a set of activities they can do. Each bucket can be filled with various activities which are filtered by cost, location and pax. In addition, users can write notes for each experience and download them in a pdf. </p>
+
+<div align="center">
+  <a href="">
+    <img src="./resources/ERD.png" alt="ERD" width="600" height="auto">
+  </a>
+</div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
