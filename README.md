@@ -238,11 +238,12 @@ alternatives are friends, Google or social media. </p>
 
 - [x] User Login and Registration
 - [x] Activities Page
-- [x] Experience Selection 
-- [ ] Search Function for Activities
+- [x] Bucket Selection 
+- [X] Admin Page
 - [ ] Recommendation Feature
+- [ ] PDF Download Feature
 - [ ] Note Recording Feature
-- [ ] Activity Sharing Feature
+- [ ] Bucket Sharing Feature
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
