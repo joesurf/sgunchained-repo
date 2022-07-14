@@ -36,7 +36,7 @@ const userInfoFromStorage = localStorage.getItem('userInfo')
   ? JSON.parse(localStorage.getItem('userInfo'))
   : null
 
-  const subscriptionDetailsFromStorage = localStorage.getItem('subscriptionDetails')
+const subscriptionDetailsFromStorage = localStorage.getItem('subscriptionDetails')
   ? JSON.parse(localStorage.getItem('subscriptionDetails'))
   : {}
 

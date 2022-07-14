@@ -49,7 +49,7 @@ function HomeScreen() {
         }
       </Row>
       <Row>
-        <MusicPlayer></MusicPlayer>
+        {/* <MusicPlayer></MusicPlayer> */}
       </Row>
     </div>
   )

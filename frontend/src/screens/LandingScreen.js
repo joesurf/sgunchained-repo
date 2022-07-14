@@ -109,7 +109,7 @@ function LandingScreen() {
             <HorizontalScrollbar items={shuffle(activities).slice(0, 9)} />
         }
       </Row>
-      <MusicPlayer></MusicPlayer>
+      {/* <MusicPlayer></MusicPlayer> */}
     </div>
   )
 }

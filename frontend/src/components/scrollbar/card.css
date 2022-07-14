@@ -15,3 +15,30 @@
   top: 33px;
   left: 9px;
 }
+
+
+
+.dropdown__items {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  height: 0px;
+  max-height: 0px;
+  transition: max-height 0.6s ease;
+ }
+ 
+ 
+.dropdown.active .dropdown__items {
+  visibility: visible;
+  background: #0e0a07;
+  border: 1px solid #0e0a07;
+  height: auto;
+  max-height: 290px;
+  opacity: 1;
+  transition: max-height 0.7s, opacity 3s, visibility 4s ease;
+}
+
+.dropdown__item {
+  cursor: pointer;
+  font-size: small;
+}
