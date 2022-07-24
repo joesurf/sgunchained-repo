@@ -84,11 +84,13 @@ export function Card({ title, itemId, activity }) {
                 className='btn-block dropdown__item' 
                 type='button'
                 disabled=
-                { JSON.parse(localStorage.getItem('bucketItems'))
+                { 
+                  false && JSON.parse(localStorage.getItem('bucketItems'))
                   .map(element => element.activity).includes(activity._id)
                 }
               >
-                { JSON.parse(localStorage.getItem('bucketItems'))
+                { 
+                  false && JSON.parse(localStorage.getItem('bucketItems'))
                   .map(element => element.activity).includes(activity._id)
                     ? 'Added'
                     : 'Add to Bucket'
