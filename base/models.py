@@ -20,11 +20,13 @@ class Activity(models.Model):
     image = models.ImageField(null=True, blank=True, default='/chang-duong-Sj0iMtq_Z4w-unsplash.jpg')
     description = models.TextField(null=True, blank=True)
     price = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
+    purpose = models.CharField(max_length=200, null=True, blank=True)
+    adventure = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
+    people = models.IntegerField(null=True, blank=True, default=0)
     tags = TaggableManager()
 
     # link = models.CharField(max_length=200, null=True, blank=True)
     # genre = models.CharField(max_length=200, null=True, blank=True)
-    # purpose = models.CharField(max_length=200, null=True, blank=True)
     # colour = models.CharField(max_length=200, null=True, blank=True)
     # rating = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
     # numReviews = models.IntegerField(null=True, blank=True, default=0)
@@ -32,6 +34,16 @@ class Activity(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+
+
+class Rating(models.Model):
+    _id = models.AutoField(primary_key=True, editable=False)
+    activity = models.ForeignKey(Activity, on_delete=models.SET_NULL, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    rating = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.user.name} rating {self.activity.name} at {self.rating}"
 
 
 class Address(models.Model):

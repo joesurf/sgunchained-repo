@@ -27,6 +27,7 @@ urlpatterns = [
     path('api/activities/', include('base.urls.activity_urls')),
     path('api/users/', include('base.urls.user_urls')),
     path('api/trips/', include('base.urls.trip_urls')),
+    path('api/recommendation/', include('base.urls.recommendation_urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

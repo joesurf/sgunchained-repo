@@ -32,8 +32,28 @@ function BucketScreen() {
 
   const pdfGenerate = () => {
     const doc = new jsPDF('portrait', 'px', 'a4', 'false')
-    doc.setFont('Montserrat', 'bold')
+    doc.setFont('calibri', 'bold')
     doc.text(60, 60, 'Look out for a super slick pdf with the activities you have selected')
+
+    doc.addPage('a4', 'portrait')
+
+    const x = 110
+
+    for (let i = 0; i < bucketItems.length; i++) {
+      
+      const activity = bucketItems[i]
+
+      doc.addImage(activity.image, 'jpg', 5, 10+i*x, 160, 90)
+      doc.setFontSize(15)
+      doc.text(activity.name, 
+        180, 20+i*x, {maxWidth: 250})
+      doc.setFontSize(10)
+      doc.text(activity.name, 
+        180, 30+i*x, {maxWidth: 250})
+
+    }
+    
+
     doc.save('unchained.pdf')
   }
 
