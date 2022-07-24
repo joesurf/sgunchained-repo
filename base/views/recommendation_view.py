@@ -20,7 +20,6 @@ from .ContentBasedRec.ContentKNNAlgorithm import ContentKNNAlgorithm
 from surprise import AlgoBase
 from surprise import PredictionImpossible
 import math
-import numpy as np
 import heapq
 
 class ContentKNNAlgorithm(AlgoBase):
