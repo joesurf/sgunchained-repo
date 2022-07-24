@@ -59,7 +59,7 @@ export function Card({ title, itemId, activity }) {
         </div> */}
       </div>
       <div>
-        <Link to={`/activity/${activity._id}`}>
+        <Link to=''>  {/*to={`/activity/${activity._id}`}*/}
           <div className="frame">
             <img className="frame1" src={frame} width="300" height="200" />
             <img className="frame2" src={activity.image} width="285" height="135" />

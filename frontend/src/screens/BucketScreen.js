@@ -6,6 +6,8 @@ import Message from '../components/Message';
 import { addToBucket, removeFromBucket } from '../actions/bucketActions';
 
 import jsPDF from 'jspdf';
+import travel from '../assets/travel.jpeg';
+import note from '../assets/note.jpeg';
 
 
 function BucketScreen() {
@@ -32,28 +34,30 @@ function BucketScreen() {
 
   const pdfGenerate = () => {
     const doc = new jsPDF('portrait', 'px', 'a4', 'false')
+    doc.addImage(travel, 'jpeg', 0, 0, 1080, 1350)
     doc.setFont('calibri', 'bold')
-    doc.text(60, 60, 'Look out for a super slick pdf with the activities you have selected')
+    doc.text(130, 40, 'An Amazing Journey Awaits You')
 
-    doc.addPage('a4', 'portrait')
-
-    const x = 110
+    let x = 110
 
     for (let i = 0; i < bucketItems.length; i++) {
+
+      if (i % 3 == 0 && i != 0) {
+        doc.addPage('portrait', 'a4')
+        doc.addImage(travel, 'jpeg', 0, 0, 1080, 1350)
+      }
       
       const activity = bucketItems[i]
 
-      doc.addImage(activity.image, 'jpg', 5, 10+i*x, 160, 90)
+      doc.addImage(note, 'jpeg', 15, 70+(i%3)*x, 160, 90)
       doc.setFontSize(15)
       doc.text(activity.name, 
-        180, 20+i*x, {maxWidth: 250})
+        180, 80+(i%3)*x, {maxWidth: 250})
       doc.setFontSize(10)
       doc.text(activity.name, 
-        180, 30+i*x, {maxWidth: 250})
+        180, 90+(i%3)*x, {maxWidth: 250})
 
     }
-    
-
     doc.save('unchained.pdf')
   }
 
