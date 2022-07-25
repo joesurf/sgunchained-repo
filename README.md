@@ -265,7 +265,7 @@ alternatives are friends, Google or social media. </p>
 - [x] Activities Page
 - [x] Bucket Selection 
 - [x] Admin Page
-- [o] Recommendation Feature
+- [ ] Recommendation Feature
 - [x] PDF Download Feature
 
 <p align="right">(<a href="#top">back to top</a>)</p>
