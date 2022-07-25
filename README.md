@@ -63,7 +63,7 @@
 
 <p>Detailed: Visitors come to the website in search of interesting experiences in Singapore. The website aims to recommend activities that are cheap and easily accessible while being sufficiently novel for students, as most similar sites tend to focus on providing a marketplace and thus expensive activities. </p>
 
-<p>Users can choose to sign in to save their experiences as well as improve our recommendation by providing personal information and past selections. All users will first be directed to a landing page which seeks to understand their current mood or interest. After that, they will recommended a few activities based on their responses, of which they can filter based on various constraints like cost, location and availability. The website will also provide details for how to conduct the activities suggested.</p>
+<p>All users will first be directed to a landing page which seeks to understand their current mood or interest. After that, they will recommended a few activities based on their responses, of which they can filter based on various constraints like cost, location and availability.</p>
 
 <p>After the experience, users can write personal notes about the experience which will be saved. They can also rate and comment on each particular activity or share their experience bucket with others. Activities which are not completed can be saved to a wishlist. </P>
 
@@ -85,7 +85,6 @@ alternatives are friends, Google or social media. </p>
 #### User
 - [ ] As a user who wants a new experience, I want to be able to find interesting options quickly, subject to various constraints.
 - [ ] As a user who is unsure where to start, I want places and activities to be recommended to me based on my past choices and my preferences.
-- [ ] As a user who has tried the experience, I want to be able to note down my thoughts about the experience.
 - [ ] As a user who has used the platform, I want to be able to share my experience with others.
 
 #### Admin
@@ -136,69 +135,69 @@ alternatives are friends, Google or social media. </p>
       </a>
     </div>
   </ol>
-    <ol>
-      <strong>Home Page -  Button Filters</strong>
-      <p>In addition, users can click on the button theme filters which will reveal activities that are associated with that particular theme. Every time a button is clicked, all the buttons will be randomly generated in order to offer a wide variety of themes and also add an element of mystery.</p>
-      <div align="center">
-        <a href="">
-          <img src="./resources/HomePage-Buttons.png" alt="HomePage-Buttons" width="600" height="auto">
-        </a>
-      </div>
-    </ol>
-    <ol>
-      <strong>Profile Page</strong>
-      <p>Every user will have their own profile page. Here, users can choose to update their name, email and password.</p>
-      <div align="center">
-        <a href="">
-          <img src="./resources/ProfilePage.png" alt="ProfilePage" width="600" height="auto">
-        </a>
-      </div>
-    </ol>
-    <ol>
-      <strong>Bucket Page</strong>
-      <p>Users can add activities that they are interested in into this page. In addition, they can delete them as well. This is meant to be the confirmation page before users download activity information.</p>
-      <div align="center">
-        <a href="">
-          <img src="./resources/BucketPage.png" alt="BucketPage" width="600" height="auto">
-        </a>
-      </div>
-    </ol>
-    <ol>
-      <strong>Bucket Page - Download PDF</strong>
-      <p>Users can download a cool pamphlet [WIP] that includes more details about the activities they have chosen, including location and duration.</p>
-      <div align="center">
-        <a href="">
-          <img src="./resources/BucketPage-Download.png" alt="BucketPage-Download" width="600" height="auto">
-        </a>
-      </div>
-    </ol>
-    <ol>
-      <strong>Admin Page</strong>
-      <p>Admins are given access to an additional admin page in the navigation bar where they can edit information about users and activities.</p>
-      <div align="center">
-        <a href="">
-          <img src="./resources/AdminPage.png" alt="AdminPage" width="600" height="auto">
-        </a>
-      </div>
-    </ol>
-    <ol>
-      <strong>Admin Page - Edit Users</strong>
-      <p>Admins can see the list of users, update or delete user information at this page.</p>
-      <div align="center">
-        <a href="">
-          <img src="./resources/AdminPage-EditUsers.png" alt="AdminPage-EditUsers" width="600" height="auto">
-        </a>
-      </div>
-    </ol>
-    <ol>
-      <strong>Admin Page - Edit Activities</strong>
-      <p>Admins can see the full list of activities, create, update and delete activities at this page.</p>
-      <div align="center">
-        <a href="">
-          <img src="./resources/AdminPage-EditActivities.png" alt="AdminPage-EditActivities" width="600" height="auto">
-        </a>
-      </div>
-    </ol>
+  <ol>
+    <strong>Home Page -  Button Filters</strong>
+    <p>In addition, users can click on the button theme filters which will reveal activities that are associated with that particular theme. Every time a button is clicked, all the buttons will be randomly generated in order to offer a wide variety of themes and also add an element of mystery.</p>
+    <div align="center">
+      <a href="">
+        <img src="./resources/HomePage-Buttons.png" alt="HomePage-Buttons" width="600" height="auto">
+      </a>
+    </div>
+  </ol>
+  <ol>
+    <strong>Profile Page</strong>
+    <p>Every user will have their own profile page. Here, users can choose to update their name, email and password.</p>
+    <div align="center">
+      <a href="">
+        <img src="./resources/ProfilePage.png" alt="ProfilePage" width="600" height="auto">
+      </a>
+    </div>
+  </ol>
+  <ol>
+    <strong>Bucket Page</strong>
+    <p>Users can add activities that they are interested in into this page. In addition, they can delete them as well. This is meant to be the confirmation page before users download activity information.</p>
+    <div align="center">
+      <a href="">
+        <img src="./resources/BucketPage.png" alt="BucketPage" width="600" height="auto">
+      </a>
+    </div>
+  </ol>
+  <ol>
+    <strong>Bucket Page - Download PDF</strong>
+    <p>Users can download a cool pamphlet [WIP] that includes more details about the activities they have chosen, including location and duration.</p>
+    <div align="center">
+      <a href="">
+        <img src="./resources/BucketPage-Download.png" alt="BucketPage-Download" width="600" height="auto">
+      </a>
+    </div>
+  </ol>
+  <ol>
+    <strong>Admin Page</strong>
+    <p>Admins are given access to an additional admin page in the navigation bar where they can edit information about users and activities.</p>
+    <div align="center">
+      <a href="">
+        <img src="./resources/AdminPage.png" alt="AdminPage" width="600" height="auto">
+      </a>
+    </div>
+  </ol>
+  <ol>
+    <strong>Admin Page - Edit Users</strong>
+    <p>Admins can see the list of users, update or delete user information at this page.</p>
+    <div align="center">
+      <a href="">
+        <img src="./resources/AdminPage-EditUsers.png" alt="AdminPage-EditUsers" width="600" height="auto">
+      </a>
+    </div>
+  </ol>
+  <ol>
+    <strong>Admin Page - Edit Activities</strong>
+    <p>Admins can see the full list of activities, create, update and delete activities at this page.</p>
+    <div align="center">
+      <a href="">
+        <img src="./resources/AdminPage-EditActivities.png" alt="AdminPage-EditActivities" width="600" height="auto">
+      </a>
+    </div>
+  </ol>
 </li>
 
 
@@ -239,11 +238,9 @@ alternatives are friends, Google or social media. </p>
 - [x] User Login and Registration
 - [x] Activities Page
 - [x] Bucket Selection 
-- [X] Admin Page
-- [ ] Recommendation Feature
-- [ ] PDF Download Feature
-- [ ] Note Recording Feature
-- [ ] Bucket Sharing Feature
+- [x] Admin Page
+- [o] Recommendation Feature
+- [x] PDF Download Feature
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
