@@ -201,6 +201,32 @@ alternatives are friends, Google or social media. </p>
 </li>
 
 
+#### Milestone 3 - Refinement > Bugs, Edge Features, Testing
+<li>
+  <ol>
+    <strong>Home Page - Activity Info</strong>
+    <p>Upon hovering each of the activity, a card will slide down with the information of the activity and a button to add the activity to the user's bucket list.</p>
+    <div align="center">
+      <a href="">
+        <img src="./resources/HomePage-CardSlide.png" alt="HomePage-CardSlide" width="600" height="auto">
+      </a>
+    </div>
+  </ol>
+  <ol>
+    <strong>PDF Design</strong>
+    <p>A PDF page of the activities that users have saved to their bucket list for reference and sharing.</p>
+    <div align="center">
+      <a href="">
+        <img src="./resources/BucketPage-PDF.png" alt="Bucket-PDF" width="600" height="auto">
+      </a>
+    </div>
+  </ol>
+  <ol>
+    <strong>Testing</strong>
+    <p>Conducted system testing to check for usability of core functionality. Conducted user testing to get user feedback.</p>
+  </ol>
+</li>
+
 
 
 ### Concept Design 
