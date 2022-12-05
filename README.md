@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-# test github actions
+# test github action
 
 <!-- PROJECT SHIELDS -->
 <!--
