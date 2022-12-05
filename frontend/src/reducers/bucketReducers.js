@@ -7,7 +7,7 @@ import {
   BUCKET_SAVE_PAYMENT_METHOD 
 } from '../constants/bucketConstants';
 
-
+//test
 export const bucketReducer = (state = { bucketItems: [], subscriotionDetails: {} }, action) => {
   switch (action.type) {
     case BUCKET_ADD_ITEM:
